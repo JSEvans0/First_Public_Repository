@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
@@ -276,4 +276,5 @@ elif page == "Conclusions/Recommendations":
 
     st.plotly_chart(px.bar(sorted_coef_df, x="Coef", y="Feature", title="Features and Coefficients from the Linear Regression Model"))
     
+
     st.dataframe(coef_df.sort_values(by = "Coef", ascending = False))
